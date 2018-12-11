@@ -1,45 +1,51 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+Linan Chen
+20082479
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+Description
+The application is designed for users to order their meal online. Customers can search the dishes and they also can add, delete or update their order after register and login.
 
----
 
-## Edit a file
+Function List
+Users
+Register:    (post) Create a new user, e-mail and password are required.
+Login:     (post) User can sign in if the email and password exist in database and are both correct.
+Authentication: If the user logins in successfully, it will give a token to authenticate. When the user get permissions, he can do some specific operations.
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
+Delete user:    (delete) Delete a user by ID.
+Update user:    (put) Modify user information such as first name, last name and so on. 
+Get all users:    (get) List all users in database.
+Get a user:    (get) Get a user according to ID.
 
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+Dishes 
+Get all dishes:    (get) List all dishes in database.
+get one dish:    (get) Get a dish according to ID. 
 
----
+fuzzy search: find dishes by name: Find a dish contained the key word in name. 
 
-## Create a file
+Add dishes:    (post) Create a new dish, including name, type, description, price, and date is generated automatically.
+Delete dishes:    (delete) Delete a dish according to ID.
+Update dishes:    (put) Modify a dish according to ID.
 
-Next, you’ll add a new file to this repository.
+Orders
+Create an order:    (post) User who has permission can create an order, the “dishes” in order is an array and the date is generated automatically.
+Delete an order:    (delete) Delete an order according ID.
+Update an order:    (put) Modify an order according ID.
+Get all orders:     (get) List all orders in database. 
+Get an order :     (get) Get an order according to ID.
 
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
+Get total price of order:     (get) Calculate the total price of an order. 
 
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
 
----
+Reference
+https://medium.com/@obrientimothya/make-an-api-with-node-js-mongodb-and-jwt-authentication-9da443a1f59b
+https://stackoverflow.com/questions/2351630/fuzzy-regular-expressions
+https://docs.mongodb.com/manual/reference/database-references/
+https://mongoosejs.com/docs/populate.html
 
-## Clone a repository
 
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
+Video Link
+https://www.youtube.com/watch?v=RRxiTIE66ss&feature=youtu.be
 
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
-
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+Repo Link
+https://bitbucket.org/Lina20082479/meal-ordering/src/master/

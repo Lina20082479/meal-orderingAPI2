@@ -9,6 +9,9 @@ const routes = (route) =>{
         .get(orderCtrl.getOne)
         .put(orderCtrl.update)
         .delete(orderCtrl.delete)
+
+    route.route('/orders-search/:userId')
+        .get(orderCtrl.getByUserId)
 }
 
 module.exports = routes;

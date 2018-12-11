@@ -15,6 +15,10 @@ const routes = (route) =>{
     .get(userCtrl.getOne)
     .put(userCtrl.update)
     .delete(userCtrl.delete)
+
+  route.route('/user-search/:email')
+    .get(userCtrl.getByEmail)
 }
 
+userCtrl.createRootUser();
 module.exports = routes;

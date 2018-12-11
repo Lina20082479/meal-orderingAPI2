@@ -10,6 +10,7 @@ const authController = {
                 const token = jwt.sign({
                     email: user.email,
                     first_name: user.first_name,
+                    isAdmin: user.isAdmin,
                     last_name: user.last_name
                 }, 'Waterford');
                 res.json({token})
