@@ -1,4 +1,4 @@
-eslint-disable-next-line no-unused-vars
+//eslint-disable-next-line no-unused-vars
 var app = require('../../app');
 let Users = require('../../models/user');
 let chai = require('chai');
